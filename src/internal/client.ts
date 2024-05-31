@@ -1379,7 +1379,8 @@ export class TypedClient {
       throw new errors.InvalidObjectNameError(`Invalid object name: ${objectName}`)
     }
     if (!isString(uploadId)) {
-      throw new TypeError('uploadId should be of type "string"')
+      uploadId = (uploadId as any).toString()
+      // throw new TypeError('uploadId should be of type "string"')
     }
     if (!isObject(etags)) {
       throw new TypeError('etags should be of type "Array"')
