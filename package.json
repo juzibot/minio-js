@@ -149,5 +149,9 @@
     "cloud",
     "s3",
     "storage"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  }
 }
